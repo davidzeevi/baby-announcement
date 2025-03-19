@@ -202,6 +202,7 @@
         <div class="question">Is there a baby yet?</div>
         <div id="answer-container">
             <div class="answer" id="baby-answer">NOT YET</div>
+            <div class="hamsa-container" id="hamsa-icons" style="font-size: 2rem; margin: 1rem 0;">🪬 🪬 🪬</div>
             <div class="details" id="baby-details" style="display: none;">It's a boy!</div>
         </div>
     </div>
@@ -293,10 +294,12 @@
         function updateBabyStatus(isHere) {
             if (isHere) {
                 babyAnswer.textContent = "YES!!!";
+                document.getElementById('hamsa-icons').style.display = 'none';
                 babyDetails.style.display = 'block';
                 body.style.backgroundColor = '#D4F1F9'; // Baby blue background
             } else {
                 babyAnswer.textContent = "NOT YET";
+                document.getElementById('hamsa-icons').style.display = 'block';
                 babyDetails.style.display = 'none';
                 body.style.backgroundColor = 'white';
             }
